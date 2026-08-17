@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toolnest – Simple Online Tools</title>
+  <meta name="description" content="Toolnest provides simple, fast and useful online tools for developers, creators and everyday tasks.">
+  <meta property="og:title" content="Toolnest – Simple Online Tools">
+  <meta property="og:description" content="Simple, fast and useful browser-based tools for everyday digital tasks.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.svg">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tools.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="js/tools.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Toolnest home"><img src="assets/logo.svg" alt="" width="36" height="36"><span>Toolnest</span></a>
+    <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a><a href="#tools">Tools</a><a href="#about">About</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero section">
+      <p class="eyebrow">Browser-based toolbox</p>
+      <h1>Simple tools. Zero hassle.</h1>
+      <p class="hero-copy">Useful online tools for everyday tasks, creators and developers.</p>
+      <label class="search-wrap" for="toolSearch"><span>⌕</span><input id="toolSearch" type="search" placeholder="Search tools..." autocomplete="off"></label>
+      <div class="shortcuts" aria-label="Popular tools">
+        <button data-open-tool="qr">QR Generator</button><button data-open-tool="image-compressor">Image Compressor</button><button data-open-tool="json">JSON Formatter</button><button data-open-tool="word-counter">Word Counter</button>
+      </div>
+    </section>
+    <section id="tools" class="section tools-section" aria-labelledby="tools-title">
+      <div class="section-heading"><p class="eyebrow">Toolbox</p><h2 id="tools-title">All Tools</h2><p>Everything you need, in one place.</p></div>
+      <div id="toolGrid" class="tool-grid" aria-live="polite"></div>
+      <div id="noResults" class="empty-state" hidden><h3>No tools found</h3><p>Try another search term, such as image, JSON, password, or color.</p></div>
+    </section>
+    <section id="workspace" class="section workspace-section" aria-live="polite" tabindex="-1" hidden>
+      <div class="workspace-shell">
+        <div class="workspace-head"><div><p class="eyebrow" id="workspaceCategory">Tool</p><h2 id="workspaceTitle">Tool Workspace</h2><p id="workspaceDescription"></p></div><button id="closeWorkspace" class="button ghost" type="button">Close</button></div>
+        <div id="workspaceBody" class="workspace-body"></div>
+      </div>
+    </section>
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="about-card"><p class="eyebrow">About</p><h2 id="about-title">About Toolnest</h2><p>Toolnest is a collection of simple, fast and useful online tools designed to make everyday digital tasks easier.</p><p>Many tools process data directly in the browser whenever possible, using built-in web APIs for quick local workflows.</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>Toolnest</strong><p>Simple tools. Zero hassle.</p></div><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#tools">Tools</a><a href="#about">About</a></nav><p>© 2026 Toolnest</p></footer>
+</body>
+</html>
