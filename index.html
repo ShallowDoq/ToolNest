@@ -1,57 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Toolnest – Simple Online Tools</title>
-  <meta name="description" content="Toolnest provides simple, fast and useful online tools for developers, creators and everyday tasks.">
-  <meta property="og:title" content="Toolnest – Simple Online Tools">
-  <meta property="og:description" content="Simple, fast and useful browser-based tools for everyday digital tasks.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/logo.svg">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/tools.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-  <script src="js/tools.js" defer></script>
-  <script src="js/search.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Thumbnail Downloader — Download HD Video Thumbnails</title>
+  <meta name="description" content="Paste a YouTube video URL to preview and download available HD YouTube thumbnail images in seconds.">
+  <meta property="og:title" content="YouTube Thumbnail Downloader"><meta property="og:description" content="Preview and download available YouTube video thumbnail images."><meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css"><script src="js/app.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Toolnest home"><img src="assets/logo.svg" alt="" width="36" height="36"><span>Toolnest</span></a>
-    <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a href="#home">Home</a><a href="#tools">Tools</a><a href="#about">About</a>
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
-    </nav>
-  </header>
-  <main id="home">
-    <section class="hero section">
-      <p class="eyebrow">Browser-based toolbox</p>
-      <h1>Simple tools. Zero hassle.</h1>
-      <p class="hero-copy">Useful online tools for everyday tasks, creators and developers.</p>
-      <label class="search-wrap" for="toolSearch"><span>⌕</span><input id="toolSearch" type="search" placeholder="Search tools..." autocomplete="off"></label>
-      <div class="shortcuts" aria-label="Popular tools">
-        <button data-open-tool="qr">QR Generator</button><button data-open-tool="image-compressor">Image Compressor</button><button data-open-tool="json">JSON Formatter</button><button data-open-tool="word-counter">Word Counter</button>
-      </div>
-    </section>
-    <section id="tools" class="section tools-section" aria-labelledby="tools-title">
-      <div class="section-heading"><p class="eyebrow">Toolbox</p><h2 id="tools-title">All Tools</h2><p>Everything you need, in one place.</p></div>
-      <div id="toolGrid" class="tool-grid" aria-live="polite"></div>
-      <div id="noResults" class="empty-state" hidden><h3>No tools found</h3><p>Try another search term, such as image, JSON, password, or color.</p></div>
-    </section>
-    <section id="workspace" class="section workspace-section" aria-live="polite" tabindex="-1" hidden>
-      <div class="workspace-shell">
-        <div class="workspace-head"><div><p class="eyebrow" id="workspaceCategory">Tool</p><h2 id="workspaceTitle">Tool Workspace</h2><p id="workspaceDescription"></p></div><button id="closeWorkspace" class="button ghost" type="button">Close</button></div>
-        <div id="workspaceBody" class="workspace-body"></div>
-      </div>
-    </section>
-    <section id="about" class="section about-section" aria-labelledby="about-title">
-      <div class="about-card"><p class="eyebrow">About</p><h2 id="about-title">About Toolnest</h2><p>Toolnest is a collection of simple, fast and useful online tools designed to make everyday digital tasks easier.</p><p>Many tools process data directly in the browser whenever possible, using built-in web APIs for quick local workflows.</p></div>
-    </section>
-  </main>
-  <footer class="site-footer"><div><strong>Toolnest</strong><p>Simple tools. Zero hassle.</p></div><nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#tools">Tools</a><a href="#about">About</a></nav><p>© 2026 Toolnest</p></footer>
-</body>
-</html>
+<header class="site-header"><a class="brand" href="index.html" aria-label="YouTube Thumbnail Downloader home"><span class="brand-mark" aria-hidden="true">▶</span><span>YouTube Thumbnail <b>Downloader</b></span></a><button class="menu-button" aria-controls="site-nav" aria-expanded="false"><span class="sr-only">Toggle navigation</span><i></i><i></i><i></i></button><nav class="site-nav" id="site-nav" aria-label="Primary navigation"><a class="active" href="index.html">Downloader</a><a href="viewer.html">Thumbnail Viewer</a><a href="about.html">About</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+<main>
+<section class="hero"><div class="eyebrow">Fast, browser-based utility</div><h1>Download YouTube<br><em>Thumbnails in HD</em></h1><p>Paste a YouTube video link and instantly preview and download its available thumbnail images.</p>
+<form id="thumbnail-form" class="url-form" novalidate><label class="sr-only" for="youtube-url">YouTube video URL</label><input id="youtube-url" name="youtube-url" type="url" inputmode="url" autocomplete="url" placeholder="Paste a YouTube video URL" aria-describedby="form-message"><button id="paste-button" class="icon-button" type="button" title="Paste from clipboard" aria-label="Paste from clipboard">⌘</button><button class="button primary" type="submit"><span>Get Thumbnails</span><span class="button-spinner" hidden></span></button></form><p id="form-message" class="form-message" role="status">Supports youtube.com, youtu.be, Shorts, and embed links.</p>
+<div class="quick-links"><span>Try an example:</span><button type="button" data-example="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube.com/watch?v=...</button><span class="dot">•</span><button type="button" data-example="https://youtu.be/dQw4w9WgXcQ">youtu.be/...</button></div></section>
+<section class="how-section" aria-labelledby="how-title"><div><p class="eyebrow">How it works</p><h2 id="how-title">No sign-in. No waiting around.</h2></div><ol class="steps"><li><span>01</span><div><strong>Paste your link</strong><p>Use any common YouTube video URL.</p></div></li><li><span>02</span><div><strong>Choose a thumbnail</strong><p>We check the available image sizes.</p></div></li><li><span>03</span><div><strong>Download or open</strong><p>Save the image in one click.</p></div></li></ol></section>
+<section id="results" class="results-section" aria-live="polite" hidden><div class="result-heading"><div><p class="eyebrow">Thumbnail images</p><h2>Available downloads</h2><p id="video-id-label" class="muted"></p></div><a id="viewer-link" class="button secondary" href="viewer.html">Open in Viewer <span aria-hidden="true">→</span></a></div><div id="thumbnail-grid" class="thumbnail-grid"></div></section>
+<section id="empty-state" class="empty-section"><div class="empty-icon" aria-hidden="true">▧</div><h2>Your thumbnails will appear here</h2><p>Enter a YouTube video URL above to see every available image size.</p></section>
+<section class="info-section"><div><p class="eyebrow">Useful by design</p><h2>Everything you need for a clean thumbnail download.</h2></div><div class="info-grid"><article><span aria-hidden="true">◌</span><h3>Private by default</h3><p>Your video URL is processed in your browser. We don't upload or store your links.</p></article><article><span aria-hidden="true">↯</span><h3>Quick and lightweight</h3><p>Uses YouTube's public image URLs directly—no account or API key needed.</p></article><article><span aria-hidden="true">□</span><h3>All common sizes</h3><p>From default quality through maximum resolution, download what is available.</p></article></div></section>
+</main>
+<footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">▶</span><span>YouTube Thumbnail <b>Downloader</b></span></a><p>A small utility for creators and curious people.</p></div><nav aria-label="Footer navigation"><a href="viewer.html">Thumbnail Viewer</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav><p class="copyright">© <span data-year></span> YouTube Thumbnail Downloader</p></footer>
+</body></html>
